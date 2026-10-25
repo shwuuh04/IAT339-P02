@@ -14,28 +14,27 @@
 
   <body>
 
-    <nav>
+    <nav aria-label="Main">
       <ul class="navBarList mileastSample">
         <li id="logo"><a href="index.html" class="navBarButtons">CinnaMunch</a></li>
         <li><a href="index.html" class="navBarButtons">Home</a></li>
         <li><a href="productpage.html" class="navBarButtons">Menu</a></li>
+        <li><a href="events.html" class="navBarButtons">Events</a></li>
         <li><a href="about.html" class="navBarButtons">About Us</a></li>
+        <li><a href="about.html#contact" class="navBarButtons">Contact</a></li>
         <li><a href="checkout.html" class="navBarButtons"><img src="img/yourCart.png" alt="Cart"></a></li>
       </ul>
     </nav>
-      
 
-    <h1 class="breadcrumbs">Checkout</h1>
-    <a class="button-nav" href="productpage.html">&larr; Back to menu</a>
-
+    <main>
+      <h1>Checkout</h1>
+      <a class="button-nav" href="productpage.html">&larr; Back to menu</a>
 
       <!-- The div that holds the payment form on the left and the order cart on the right. -->
       <div id="checkoutContainer">
 
-
-        
         <section id="paymentForm">
-          <form action="#" method="post">
+          <form action="confirmation.html" method="post">
 
             <fieldset>
               <legend>Order type</legend>
@@ -126,6 +125,7 @@
           </table>
         </section>
       </div>
+    </main>
 
   </body>
 </html>

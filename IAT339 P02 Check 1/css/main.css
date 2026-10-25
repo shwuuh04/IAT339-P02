@@ -211,16 +211,13 @@ header nav a {
 }
 
 .breadcrumbs {
-  margin-top: 2rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  margin-bottom: 2rem;
 }
 
 .breadcrumbsLink {
   display:flex;
-  justify-content: center;
+  flex-wrap: wrap;
+  align-items: center;
 }
 
 .breadcrumbsButton {
@@ -231,7 +228,7 @@ header nav a {
   margin: 0 1rem;
 }
 
-#logo {
+.navBarList li:first-child {
   margin-right: auto;
 }
 
@@ -349,7 +346,7 @@ input[type="radio"] {
   flex: 2 1 20em;
 }
 
-@media (max-width: 60em) {
+@media (max-width: 70em) {
   .navBarButtons {
     padding: 1rem;
   }
@@ -496,4 +493,41 @@ fieldset input[type="radio"] + label {
 
 #citations a {
   overflow-wrap: anywhere;
+}
+
+/* Textareas (contact and feedback forms) to match the text inputs */
+fieldset textarea {
+  display: block;
+  margin-top: 0.25rem;
+  width: 100%;
+  max-width: 320px;
+  box-sizing: border-box;
+  font-family: var(--font-body);
+  padding: 0.5rem 0.75rem;
+  border: 1px solid var(--color-brown);
+  border-radius: 4px;
+  background-color: #fff;
+}
+
+fieldset textarea:hover {
+  border-color: var(--color-gold);
+}
+
+fieldset textarea:focus {
+  outline: none;
+  border-color: var(--color-gold);
+  box-shadow: 0 0 0 3px rgba(201, 162, 39, 0.35);
+}
+
+/* Space below forms */
+form {
+  margin-bottom: 1.5rem;
+}
+
+/* Product detail page */
+.product-detail-img {
+  width: 100%;
+  max-width: 24em;
+  height: auto;
+  border-radius: 5%;
 }

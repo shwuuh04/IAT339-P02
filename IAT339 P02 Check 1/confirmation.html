@@ -27,8 +27,64 @@
     </nav>
 
     <main>
-      <h1>Thank You for Your Order</h1>
-      <p>Placeholder text confirming the order and giving an order number.</p>
+      <h1>Thank You for Your Order!</h1>
+      <h2>Order Details</h2>
+      <div id="confirmationContainer">
+        <p>Order number: <span id="orderBold">#CM1024</span></p>
+        <p>Name on order: Jason Smith</p>
+        <p>Email: jsmithy12@gmail.com</p>
+        <p>Order type: Take-out</p>
+        <p>Pickup time: October 30th, 2026 10:30 AM</p>
+        <table>
+          <thead>
+            <tr>
+              <th scope="col">Item</th>
+              <th scope="col" class="numeric">Price</th>
+              <th scope="col" class="numeric">Quantity</th>
+              <th scope="col" class="numeric">Subtotal</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row" class="thItem">
+                <img src="img/chocolatechipcookie.jpg" alt="Chocolate chip cookie" class="cart-thumb">
+                Chocolate chip cookie
+              </th>
+              <td class="numeric">$3.00</td>
+              <td class="numeric">2</td>
+              <td class="numeric">$6.00</td>
+            </tr>
+            <tr>
+              <th scope="row" class="thItem">
+                <img src="img/buttercroissant.jpg" alt="Butter croissant" class="cart-thumb">
+                Butter croissant
+              </th>
+              <td class="numeric">$4.50</td>
+              <td class="numeric">1</td>
+              <td class="numeric">$4.50</td>
+            </tr>
+            <tr>
+              <th scope="row" class="thItem">
+                <img src="img/blueberrymuffin.jpg" alt="Blueberry muffin" class="cart-thumb">
+                Blueberry muffin
+              </th>
+              <td class="numeric">$3.75</td>
+              <td class="numeric">1</td>
+              <td class="numeric">$3.75</td>
+            </tr>
+          </tbody>
+          <tfoot>
+            <tr>
+              <th scope="row" colspan="3">Total</th>
+              <td class="numeric">$14.25</td>
+            </tr>
+          </tfoot>
+        </table>
+
+      </div>
+
+
+
       <a class="button-nav" href="index.html">Back to homepage</a>
       <a class="button-nav" href="productpage.html">Keep browsing</a>
     </main>

@@ -212,11 +212,15 @@ header nav a {
   color: var(--color-brown);
 }
 
+/* Active link: the page (or section) the visitor is on */
+.navBarButtons[aria-current] {
+  background-color: var(--color-cream);
+  color: var(--color-brown);
+  box-shadow: inset 0 -0.35rem 0 var(--color-gold);
+}
+
 .breadcrumbs {
-  margin-bottom: 2rem;
-  align-items: center;
-  display:flex;
-  flex-direction: column
+  margin-bottom: 1rem;
 }
 
 .breadcrumbsLink {
@@ -230,7 +234,11 @@ header nav a {
 }
 
 .breadcrumbsArrow {
-  margin: 0 1rem;
+  margin: 0 0.75rem;
+}
+
+.breadcrumbsCurrent {
+  font-weight: 700;
 }
 
 .navBarList li:first-child {
@@ -334,6 +342,8 @@ input[type="radio"] {
 
 #cookieImg {
   height: 30rem;
+  max-width: 100%;
+  object-fit: cover;
 }
 
 #checkoutContainer {
@@ -370,6 +380,11 @@ input[type="radio"] {
 
   th, td {
     padding: 0.5rem 0.4rem;
+  }
+
+  #confirmationContainer {
+    padding: 1rem;
+    overflow-x: auto;
   }
 
   .navBarButtons {
@@ -558,3 +573,185 @@ form {
   border-radius: 5px;
 }
 
+
+
+/*
+  FOOTER -------------------
+*/
+
+footer {
+  margin-top: 4rem;
+  padding: 2rem 0 1rem;
+  border-top: 0.15rem solid var(--color-brown);
+  text-align: center;
+}
+
+footer p {
+  margin: 0 auto 0.5rem;
+}
+
+.footerName {
+  font-family: var(--font-heading);
+  font-size: 1.75rem;
+  color: var(--color-brown);
+}
+
+.footerLinks {
+  list-style-type: none;
+  margin: 1rem 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.5rem 2rem;
+}
+
+.footerSmall {
+  font-size: 0.85rem;
+}
+
+
+/*
+  HOMEPAGE -------------------
+*/
+
+.hero {
+  text-align: center;
+  padding: 3rem 0 1rem;
+}
+
+.wordmark {
+  font-size: clamp(2.5rem, 12.5vw, 9rem);
+  line-height: 0.95;
+  margin: 0;
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+}
+
+.heroTagline {
+  font-family: var(--font-heading);
+  font-size: 1.4rem;
+  color: var(--color-brown);
+  margin: 1rem auto 2rem;
+}
+
+.heroInfo {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 1.5rem;
+  text-align: left;
+  margin-top: 3rem;
+}
+
+.heroInfo p {
+  margin: 0;
+}
+
+.heroInfo strong {
+  color: var(--color-brown);
+}
+
+/* Scrolling banner (decorative) */
+/* Was learnt through these youtube videos: https://www.youtube.com/watch?v=OJ6byQDF9-Y ; https://www.youtube.com/watch?v=QvnFJPybm84 */
+.ticker {
+  overflow: hidden;
+  border-top: 2px solid var(--color-brown);
+  border-bottom: 2px solid var(--color-brown);
+  margin: 3rem 0;
+  padding: 0.5rem 0;
+  white-space: nowrap;
+}
+
+.tickerTrack {
+  display: inline-block;
+  animation: tickerScroll 30s linear infinite;
+}
+
+.tickerTrack span {
+  font-family: var(--font-heading);
+  font-size: 1.4rem;
+  text-transform: uppercase;
+  color: var(--color-brown);
+  padding-right: 2rem;
+}
+
+@keyframes tickerScroll {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .tickerTrack {
+    animation: none;
+  }
+}
+
+.sectionHeading {
+  text-align: center;
+  border-bottom: none;
+  margin-top: 1rem;
+}
+
+.promoGrid {
+  margin-bottom: 3rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
+.promoCard {
+  flex: 1 1 16em;
+  background-color: var(--color-brown);
+  color: var(--color-cream);
+  border-radius: 8px;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.promoCard h3 {
+  color: var(--color-cream);
+  font-style: normal;
+  margin-top: 0;
+}
+
+.promoCard p {
+  flex-grow: 1;
+}
+
+.promoCard a {
+  color: var(--color-yellow);
+}
+
+.promoCard a:hover {
+  color: var(--color-cream);
+}
+
+.categoryGrid {
+  list-style-type: none;
+  margin: 2rem 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
+.categoryGrid li {
+  flex: 1 1 12em;
+}
+
+.categoryGrid img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.categoryGrid .button-nav {
+  display: block;
+  text-align: center;
+  margin-top: 0.75rem;
+  font-weight: 700;
+}

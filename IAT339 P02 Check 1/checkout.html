@@ -16,17 +16,27 @@
 
     <nav aria-label="Main">
       <ul class="navBarList mileastSample">
-        <li id="logo"><a href="index.html" class="navBarButtons">CinnaMunch</a></li>
+        <li><a href="index.html" class="navBarButtons">CinnaMunch</a></li>
         <li><a href="index.html" class="navBarButtons">Home</a></li>
         <li><a href="productpage.html" class="navBarButtons">Menu</a></li>
         <li><a href="events.html" class="navBarButtons">Events</a></li>
         <li><a href="about.html" class="navBarButtons">About Us</a></li>
         <li><a href="about.html#contact" class="navBarButtons">Contact</a></li>
-        <li><a href="checkout.html" class="navBarButtons"><img src="img/yourCart.png" alt="Cart"></a></li>
+        <li><a href="checkout.html" class="navBarButtons" aria-current="page"><img src="img/yourCart.png" alt="Cart"></a></li>
       </ul>
     </nav>
 
     <main>
+      <nav class="breadcrumbs" aria-label="Breadcrumb">
+        <div class="breadcrumbsLink">
+          <a href="index.html" class="breadcrumbsButton">Home</a>
+          <span class="breadcrumbsArrow" aria-hidden="true">&raquo;</span>
+          <a href="productpage.html" class="breadcrumbsButton">Menu</a>
+          <span class="breadcrumbsArrow" aria-hidden="true">&raquo;</span>
+          <span class="breadcrumbsCurrent" aria-current="page">Checkout</span>
+        </div>
+      </nav>
+
       <h1>Checkout</h1>
       <a class="button-nav" href="productpage.html">&larr; Back to menu</a>
 
@@ -126,6 +136,19 @@
         </section>
       </div>
     </main>
+
+    <footer>
+      <p class="footerName">CinnaMunch</p>
+      <p>12345 72 Avenue, Surrey, BC V3W 2M1</p>
+      <nav aria-label="Footer">
+        <ul class="footerLinks">
+          <li><a href="about.html#contact">Contact</a></li>
+          <li><a href="styleguide.html">Style Guide</a></li>
+          <li><a href="citations.html">Citations</a></li>
+        </ul>
+      </nav>
+      <p class="footerSmall">&copy; 2026 CinnaMunch. A student project for IAT 339.</p>
+    </footer>
 
   </body>
 </html>

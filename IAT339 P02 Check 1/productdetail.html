@@ -16,9 +16,9 @@
 
     <nav aria-label="Main">
       <ul class="navBarList mileastSample">
-        <li id="logo"><a href="index.html" class="navBarButtons">CinnaMunch</a></li>
+        <li><a href="index.html" class="navBarButtons">CinnaMunch</a></li>
         <li><a href="index.html" class="navBarButtons">Home</a></li>
-        <li><a href="productpage.html" class="navBarButtons">Menu</a></li>
+        <li><a href="productpage.html" class="navBarButtons" aria-current="true">Menu</a></li>
         <li><a href="events.html" class="navBarButtons">Events</a></li>
         <li><a href="about.html" class="navBarButtons">About Us</a></li>
         <li><a href="about.html#contact" class="navBarButtons">Contact</a></li>
@@ -26,10 +26,19 @@
       </ul>
     </nav>
 
-
     <main>
+      <nav class="breadcrumbs" aria-label="Breadcrumb">
+        <div class="breadcrumbsLink">
+          <a href="index.html" class="breadcrumbsButton">Home</a>
+          <span class="breadcrumbsArrow" aria-hidden="true">&raquo;</span>
+          <a href="productpage.html" class="breadcrumbsButton">Menu</a>
+          <span class="breadcrumbsArrow" aria-hidden="true">&raquo;</span>
+          <span class="breadcrumbsCurrent" aria-current="page">Chocolate Chip Cookie</span>
+        </div>
+      </nav>
+
       <h1>Chocolate Chip Cookie</h1>
-      <img src="img/chocolatechipcookie.jpg" alt="Chocolate chip cookie" class="productdetail-img">
+      <img src="img/chocolatechipcookie.jpg" alt="Chocolate chip cookie" class="product-detail-img">
       <p><strong>$3.00</strong></p>
       <p>A soft, chewy chocolate chip cookie with a slightly crispy edge and plenty of chocolate chips.</p>
       <p>Note: Orders must be placed at least a day in advance. Please wait until you receive a 'Pickup Confirmation' email before coming to pick up your order.</p>
@@ -65,6 +74,19 @@
         <button type="submit">Submit feedback</button>
       </form>
     </main>
+
+    <footer>
+      <p class="footerName">CinnaMunch</p>
+      <p>12345 72 Avenue, Surrey, BC V3W 2M1</p>
+      <nav aria-label="Footer">
+        <ul class="footerLinks">
+          <li><a href="about.html#contact">Contact</a></li>
+          <li><a href="styleguide.html">Style Guide</a></li>
+          <li><a href="citations.html">Citations</a></li>
+        </ul>
+      </nav>
+      <p class="footerSmall">&copy; 2026 CinnaMunch. A student project for IAT 339.</p>
+    </footer>
 
   </body>
 </html>

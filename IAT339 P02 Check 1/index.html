@@ -5,7 +5,7 @@
 
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CinnaMunch Style Guide</title>
+    <title>CinnaMunch - Bakery in Surrey, BC</title>
 
     <link href="css/main.css" rel="stylesheet">
     <link href="css/fonts.css" rel="stylesheet">
@@ -14,668 +14,123 @@
 
   <body>
 
-    <header>
-      <h1>CinnaMunch Style Guide</h1>
+    <nav aria-label="Main">
+      <ul class="navBarList mileastSample">
+        <li><a href="index.html" class="navBarButtons">CinnaMunch</a></li>
+        <li><a href="index.html" class="navBarButtons" aria-current="page">Home</a></li>
+        <li><a href="productpage.html" class="navBarButtons">Menu</a></li>
+        <li><a href="events.html" class="navBarButtons">Events</a></li>
+        <li><a href="about.html" class="navBarButtons">About Us</a></li>
+        <li><a href="about.html#contact" class="navBarButtons">Contact</a></li>
+        <li><a href="checkout.html" class="navBarButtons"><img src="img/yourCart.png" alt="Cart"></a></li>
+      </ul>
+    </nav>
 
-      <p>A style guide for CinnaMunch, a bakery with an indoor cozy picnic-like experience</p>
+    <main>
 
-      <nav>        
-        <a href="#interactive_elements">Interactive Elements</a>
-        <a href="#text_elements">Text Elements</a>
-        <a href="#combined_elements">Combined Elements</a>
-        <a href="#product_listing">Product Listing</a>
-        <a href="#payment_form">Payment Form</a>
-        <a href="#checkout">Checkout</a>
-        <a href="#branding">Branding</a>
-        <a href="#citations">Citations</a>
-        <a href="productpage.html">Product Listing Page</a>
-        <a href="checkout.html">Checkout Page</a>
-        <a href="about.html">About Page</a>
-      </nav>
-    </header>
+      <section class="hero">
+        <h1 class="wordmark">CinnaMunch</h1>
+        <p class="heroTagline">A bakery with an indoor, cozy picnic-like experience</p>
+        <a class="button-nav" href="productpage.html">Browse the menu</a>
 
-
-    <!-- INTERACTIVE ELEMENTS SECTION // -->
-    <section id="interactive_elements">
-      <h2>Interactive Elements</h2>
-
-
-      <section class="element">
-        <h3>In-text link</h3>
-
-        <h4>CSS selector:</h4>
-        <p>p</p>
-
-        <h4>Sample code:</h4>
-        <code>
-          &lt;p&gt;This is a sentence with an &lt;a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank"&gt;in-text link&lt;/a&gt; in the middle.&lt;/p&gt;
-        </code>
-
-        <h4>Rendered element:</h4>
-        <p>This is a sentence with an <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank">in-text link</a> in the middle.</p>
-
+        <div class="heroInfo">
+          <p><strong>Hours</strong><br>Mon - Fri: 7:00 AM - 7:00 PM<br>Sat - Sun: 8:00 AM - 5:00 PM</p>
+          <p><strong>Find us</strong><br>12345 72 Avenue<br>Surrey, BC V3W 2M1</p>
+          <p><strong>Pick-up orders</strong><br>Please order at least a day ahead and wait<br>for your Pickup Confirmation email.</p>
+        </div>
       </section>
 
+      <!-- Was learnt through these youtube videos: https://www.youtube.com/watch?v=OJ6byQDF9-Y ; https://www.youtube.com/watch?v=QvnFJPybm84 -->
+      <div class="ticker" aria-hidden="true">
+        <div class="tickerTrack"><span>FRESH BAKED DAILY!</span><span>ORDER A DAY AHEAD!</span><span>COZY PICNIC SEATING!</span><span>CREAM CHEESE CINNAMON ROLLS ARE HERE!</span><span>FRESH BAKED DAILY!</span><span>ORDER A DAY AHEAD!</span><span>COZY PICNIC SEATING!</span><span>CREAM CHEESE CINNAMON ROLLS ARE HERE!</span></div>
+      </div>
 
-      <!-- Default Button styling section -->
-      <section class="element">
-
-        <h3>Navigation Link</h3>
-
-        <h4>CSS selector:</h4>
-        <p>.button-nav</p>
-
-        <h4>Sample code:</h4>
-        <code>
-          &lt;a href="#" class="button-nav"&gt;Default Button&lt;/a&gt;
-        </code>
-
-        <h4>Rendered element:</h4>
-        <a class="button-nav" href="#">Default Button</a>
-
+      <section>
+        <h2 class="sectionHeading">What's New</h2>
+        <div class="promoGrid">
+          <article class="promoCard">
+            <h3>Spooky Treats Are Here!</h3>
+            <p>Limited-time pumpkin goodies and Halloween-themed cookies. Grab something spooky before they're gone.</p>
+            <a href="events.html">Read more</a>
+          </article>
+          <article class="promoCard">
+            <h3>New Cream Cheese Cinnamon Rolls</h3>
+            <p>Soft, sweet and topped with our delicious icing, now on the menu for a limited time.</p>
+            <a href="events.html">Read more</a>
+          </article>
+          <article class="promoCard">
+            <h3>Books &amp; Bites</h3>
+            <p>Bring your current read and settle in for a cozy afternoon with a coffee and a fresh treat.</p>
+            <a href="events.html">See all events</a>
+          </article>
+        </div>
       </section>
 
-
-      <section class="element">
-        <h3>Submit/Reset Buttons</h3>
-
-        <h4>CSS selector:</h4>
-        <p>input</p>
-
-        <h4>Sample code:</h4>
-        <pre><code>&lt;input type="submit"&gt;
-&lt;input type="reset"&gt;</code></pre>
-
-        <h4>Rendered element:</h4>
-        <input type="submit">
-        <input type="reset">
+      <section>
+        <h2 class="sectionHeading">Our Menu</h2>
+        <ul class="categoryGrid">
+          <li>
+            <a href="productpage.html"><img src="img/cookies.jpg" alt="A plate of freshly baked cookies"></a>
+            <a class="button-nav" href="productpage.html">Cookies</a>
+          </li>
+          <li>
+            <a href="productpage.html"><img src="img/buttercroissant.jpg" alt="Butter croissant"></a>
+            <a class="button-nav" href="productpage.html">Croissants</a>
+          </li>
+          <li>
+            <a href="productpage.html"><img src="img/blueberrymuffin.jpg" alt="Blueberry muffin"></a>
+            <a class="button-nav" href="productpage.html">Muffins</a>
+          </li>
+        </ul>
       </section>
 
+      
+      <!-- Was learnt through these youtube videos: https://www.youtube.com/watch?v=OJ6byQDF9-Y ; https://www.youtube.com/watch?v=QvnFJPybm84 -->
+      <div class="ticker" aria-hidden="true">
+        <div class="tickerTrack"><span>POPULAR!</span><span>POPULAR!</span><span>POPULAR!</span><span>POPULAR!</span><span>POPULAR!</span><span>POPULAR!</span><span>POPULAR!</span><span>POPULAR!</span><span>POPULAR!</span><span>POPULAR!</span><span>POPULAR!</span><span>POPULAR!</span><span>POPULAR!</span><span>POPULAR!</span><span>POPULAR!</span><span>POPULAR!</span></div>
+      </div>
 
-      <section class="element">
-        <h3>Text Input Field with Label</h3>
-
-        <h4>CSS selector:</h4>
-        <p>#name</p>
-        
-        <h4>Sample code:</h4>
-        <pre><code>&lt;label for="name"&gt;Name:&lt;/label&gt;
-&lt;input type="text" id="name" placeholder="Start typing..."&gt;</code></pre>
-
-        <h4>Rendered element:</h4>
-        <label for="name">Name:</label>
-        <input type="text" id="name" placeholder="Start typing...">
- 
-      </section>
-
-
-      <section class="element">
-        <h3>Radio Button with Label</h3>
-
-        <h4>CSS selector:</h4>
-        <p>#answer-yes, #answer-no</p>
-
-        <h4>Sample code:</h4>
-        <pre><code>&lt;input type="radio" id="answer-yes" name="answer" value="Yes"&gt;
-&lt;label for="answer-yes"&gt;Yes&lt;/label&gt;
-&lt;input type="radio" id="answer-no" name="answer" value="no"&gt;
-&lt;label for="answer-no"&gt;No&lt;/label&gt;</code></pre>
-
-        <h4>Rendered element:</h4>
-        <input type="radio" id="answer-yes" name="answer" value="yes">
-        <label for="answer-yes">Yes</label>
-        <input type="radio" id="answer-no" name="answer" value="no">
-        <label for="answer-no">No</label>
-        
-      </section>
-
-
-      <section class="element">
-        <h3>Image as a Link</h3>
-
-        <h4>CSS selector:</h4>
-        <p>#cookieImg, .cookie-link</p>
-
-        <h4>Sample code:</h4>
-        <code>
-          &lt;a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank"&gt;&lt;img src="img/cookies.jpg" alt="wow cookie" id="cookieImg"&gt;&lt;/a&gt;
-        </code>
-
-        <h4>Rendered element:</h4>
-        <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank" class="cookie-link">
-          <img src="img/cookies.jpg" alt="wow cookie" id="cookieImg"></a>
-      </section>
-
-
-    </section>
-    <!-- // INTERACTIVE ELEMENTS SECTION -->
-
-
-
-    <!-- TEXT ELEMENTS SECTION // -->
-    <section id="text_elements">
-      <h2>Text Elements</h2>
-
-      <section class="element">
-        <h3>Headings</h3>
-
-        <h4>CSS selector:</h4>
-        <p>h1, h2, h3, h4</p>
-
-        <h4>Sample code:</h4>
-        <pre><code>&lt;h1&gt;Heading 1&lt;/h1&gt;
-&lt;h2&gt;Heading 2&lt;/h2&gt;
-&lt;h3&gt;Heading 3&lt;/h3&gt;
-&lt;h4&gt;Heading 4&lt;/h4&gt;</code></pre>
-
-        <h4>Rendered element:</h4>
-        <h1 headingoffset="1">Heading 1 - website title</h1>
-        <h1 headingoffset="1">Cinnamunch</h1>
-        <h1 headingoffset="1">CinnaMunch</h1>
-        <h1 headingoffset="1">CINNAMUNCH</h1>
-        
-        <h2>Heading 2 - webpage headers</h2>
-        <h3>Heading 3 - sub-section headers</h3>
-        <h4>Heading 4 - product cards</h4>
-      </section>
-
-      <section class="element">
-        <h3>Paragraphs</h3>
-
-        <h4>CSS selector:</h4>
-        <p>p</p>
-
-        <h4>Sample code:</h4>
-        <code>
-          &lt;p&gt;A cookie is a sweet biscuit with high sugar and fat content. Cookie dough is softer than that used for other types of biscuit, and they are cooked longer at lower temperatures. The dough typically contains flour, sugar, egg, and some type of oil or fat. It may include other ingredients such as raisins, oats, chocolate chips, or nuts. Cookie texture varies from crisp and crunchy to soft and chewy, depending on the exact combination of ingredients and methods used to create them.&lt;p&gt;
-        </code>
-
-        <h4>Rendered element:</h4>
-        <p>A cookie is a sweet biscuit with high sugar and fat content. Cookie dough is softer than that used for other types of biscuit, and they are cooked longer at lower temperatures. The dough typically contains flour, sugar, egg, and some type of oil or fat. It may include other ingredients such as raisins, oats, chocolate chips, or nuts. Cookie texture varies from crisp and crunchy to soft and chewy, depending on the exact combination of ingredients and methods used to create them.</p>
-      </section>
-
-      <section class="element">
-        <h3>Numbered Lists</h3>
-
-        <h4>CSS selector:</h4>
-        <p>none</p>
-
-        <h4>Sample code:</h4>
-        <pre><code>&lt;ol&gt;
-
-  &lt;li&gt;Cookie&lt;/li&gt;
-
-  &lt;li&gt;Muffin&lt;/li&gt;
-
-  &lt;li&gt;Cupcake&lt;/li&gt;
-
-  &lt;li&gt;Croissant&lt;/li&gt;
-
-  &lt;li&gt;Cheesecake&lt;/li&gt;
-            
-&lt;/ol&gt;</code></pre>
-
-        <h4>Rendered element:</h4>
-        <ol>
-          <li>Cookie</li>
-          <li>Muffin</li>
-          <li>Cupcake</li>
-          <li>Croissant</li>
-          <li>Cheesecake</li>
-        </ol>
-      </section>
-
-    </section>
-    <!-- // TEXT ELEMENTS SECTION -->
-
-
-
-    <!-- COMBINED ELEMENTS SECTION // -->
-    <section id="combined_elements">
-      <h2>Combined Elements</h2>
-
-      <section class="element">
-        <h3>Main Navigation</h3>
-
-        <h4>CSS selector:</h4>
-        .navBarList, .navBarButtons, #logo
-
-        <h4>Sample code:</h4>
-          &lt;nav&gt;
-            &lt;ul class="navBarList"&gt;
-              &lt;li id="logo"&gt;&lt;a href="index.html" class="navBarButtons"&gt;CinnaMunch&lt;/a&gt;&lt;/li&gt;
-              &lt;li&gt;&lt;a href="index.html" class="navBarButtons"&gt;Home&lt;/a&gt;&lt;/li&gt;
-              &lt;li&gt;&lt;a href="productpage.html" class="navBarButtons"&gt;Menu&lt;/a&gt;&lt;/li&gt;
-              &lt;li&gt;&lt;a href="about.html#location" class="navBarButtons"&gt;Location&lt;/a&gt;&lt;/li&gt;
-              &lt;li&gt;&lt;a href="about.html" class="navBarButtons"&gt;About Us&lt;/a&gt;&lt;/li&gt;
-              &lt;li&gt;&lt;a href="checkout.html" class="navBarButtons"&gt;&lt;img src="img/yourCart.png" alt="Cart"&gt;&lt;/a&gt;&lt;/li&gt;
-            &lt;/ul&gt;
-          &lt;/nav&gt;
-
-        <h4>Rendered element:</h4>
-        <nav>
-          <ul class="navBarList mileastSample">
-            <li id="logo"><a href="index.html" class="navBarButtons">CinnaMunch</a></li>
-            <li><a href="index.html" class="navBarButtons">Home</a></li>
-            <li><a href="productpage.html" class="navBarButtons">Menu</a></li>
-            <li><a href="about.html#location" class="navBarButtons">Location</a></li>
-            <li><a href="about.html" class="navBarButtons">About Us</a></li>
-            <li><a href="checkout.html" class="navBarButtons"><img src="img/yourCart.png" alt="Cart"></a></li>
-          </ul>
-        </nav>
-
-        <nav class="breadcrumbs" aria-label="Breadcrumb">
-          <a href="index.html" class="breadcrumbsButton">Home</a>
-          <span class="breadcrumbsArrow">&raquo;</span>
-          <a href="productpage.html" class="breadcrumbsButton">Baked Goods</a>
-          <span class="breadcrumbsArrow">&raquo;</span>
-          <a href="checkout.html" class="breadcrumbsButton">Checkout</a>
-        </nav>
-        <!-- another option is this "&rang;" which is a single tall [>] arrow, dunno which one u prefer -->
-
-      </section>
-
-      <section class="element" id="product_listing">
-        <h3>Product/Service Listing</h3>
-
-        <h4>CSS selector:</h4>
-        .contentContainer, .cardImg
-
-        <h4>Sample code:</h4>
-        <pre><code>&lt;div class="contentContainer"&gt;
-  &lt;img src="img/placeholderImg.png" alt="Name of product" class="cardImg"&gt;
-  &lt;h4&gt;Name of Product&lt;/h4&gt;
-  &lt;p class="price"&gt;$0.00&lt;/p&gt;
-  &lt;a href="#"&gt;View details&lt;/a&gt;
-  &lt;a href="#"&gt;Add to cart&lt;/a&gt;
-&lt;/div&gt;</code></pre>
-
-        <h4>Rendered element:</h4>
+      <section>
+        <h2 class="sectionHeading">Customer Favourites</h2>
         <div class="product-grid">
           <div class="contentContainer montserratSample">
             <img src="img/chocolatechipcookie.jpg" alt="Chocolate chip cookie" class="cardImg">
             <h4>Chocolate chip cookie</h4>
             <p class="price">$3.00</p>
-            <a href="#">View details</a>
-            <a href="#">Add to cart</a>
+            <a href="productdetail.html">View details</a>
+            <a href="checkout.html">Add to cart</a>
           </div>
           <div class="contentContainer montserratSample">
             <img src="img/buttercroissant.jpg" alt="Butter croissant" class="cardImg">
             <h4>Butter croissant</h4>
             <p class="price">$4.50</p>
-            <a href="#">View details</a>
-            <a href="#">Add to cart</a>
+            <a href="productdetail.html">View details</a>
+            <a href="checkout.html">Add to cart</a>
           </div>
           <div class="contentContainer montserratSample">
             <img src="img/blueberrymuffin.jpg" alt="Blueberry muffin" class="cardImg">
             <h4>Blueberry muffin</h4>
             <p class="price">$3.75</p>
-            <a href="#">View details</a>
-            <a href="#">Add to cart</a>
+            <a href="productdetail.html">View details</a>
+            <a href="checkout.html">Add to cart</a>
           </div>
         </div>
       </section>
 
-<!-- PAYMENT FORM  -->
- <!-- This block of code was gotten through W3Schools and Codehal and Mr. Web Designer on Youtube -->
-      <section class="element" id="payment_form">
-        <h3>Payment Form</h3>
+    </main>
 
-        <h4>CSS selector:</h4>
-        <p>input[type="radio"], input[type="text"], input[type="email"]</p>
-
-        <h4>Sample code:</h4>
-        <pre><code>&lt;form action="#" method="post"&gt;
-
-  &lt;fieldset&gt;
-    &lt;legend&gt;Order type&lt;/legend&gt;
-    &lt;input type="radio" id="order-takeout" name="order-type" value="takeout" required&gt;
-    &lt;label for="order-takeout"&gt;Take-out&lt;/label&gt;
-    &lt;input type="radio" id="order-dinein" name="order-type" value="dine-in"&gt;
-    &lt;label for="order-dinein"&gt;Dine-in&lt;/label&gt;
-  &lt;/fieldset&gt;
-
-  &lt;fieldset&gt;
-    &lt;legend&gt;Contact details&lt;/legend&gt;
-    &lt;label for="pay-name"&gt;Name on order:&lt;/label&gt;
-    &lt;input type="text" id="pay-name" name="name" autocomplete="name" required&gt;
-    &lt;label for="pay-email"&gt;Email:&lt;/label&gt;
-    &lt;input type="email" id="pay-email" name="email" autocomplete="email" required&gt;
-  &lt;/fieldset&gt;
-
-  &lt;fieldset&gt;
-    &lt;legend&gt;Payment method&lt;/legend&gt;
-    &lt;input type="radio" id="method-credit" name="payment-method" value="credit" required&gt;
-    &lt;label for="method-credit"&gt;Credit card&lt;/label&gt;
-    &lt;input type="radio" id="method-debit" name="payment-method" value="debit"&gt;
-    &lt;label for="method-debit"&gt;Debit card&lt;/label&gt;
-  &lt;/fieldset&gt;
-
-  &lt;fieldset&gt;
-    &lt;legend&gt;Card details&lt;/legend&gt;
-    &lt;label for="card-number"&gt;Card number:&lt;/label&gt;
-    &lt;input type="text" id="card-number" name="card-number" inputmode="numeric" autocomplete="cc-number" placeholder="0000 0000 0000 0000" required&gt;
-    &lt;label for="card-expiry"&gt;Expiry (MM/YY):&lt;/label&gt;
-    &lt;input type="text" id="card-expiry" name="card-expiry" autocomplete="cc-exp" placeholder="MM/YY" required&gt;
-    &lt;label for="card-cvv"&gt;Security code:&lt;/label&gt;
-    &lt;input type="text" id="card-cvv" name="card-cvv" inputmode="numeric" autocomplete="cc-csc" maxlength="4" required&gt;
-  &lt;/fieldset&gt;
-
-  &lt;button type="submit"&gt;Place order&lt;/button&gt;
-
-&lt;/form&gt;</code></pre>
-        
-        <h4>Rendered element:</h4>
-        <form action="#" method="post">
-
-          <fieldset>
-            <legend>Order type</legend>
-            <input type="radio" id="order-takeout" name="order-type" value="takeout" required>
-            <label for="order-takeout">Take-out</label>
-            <input type="radio" id="order-dinein" name="order-type" value="dine-in">
-            <label for="order-dinein">Dine-in</label>
-          </fieldset>
-
-          <fieldset>
-            <legend>Contact details</legend>
-            <label for="pay-name">Name on order:</label>
-            <input type="text" id="pay-name" name="name" autocomplete="name" required>
-            <label for="pay-email">Email:</label>
-            <input type="email" id="pay-email" name="email" autocomplete="email" required>
-          </fieldset>
-
-          <fieldset>
-            <legend>Payment method</legend>
-            <input type="radio" id="method-credit" name="payment-method" value="credit" required>
-            <label for="method-credit">Credit card</label>
-            <input type="radio" id="method-debit" name="payment-method" value="debit">
-            <label for="method-debit">Debit card</label>
-          </fieldset>
-
-          <fieldset>
-            <legend>Card details</legend>
-            <label for="card-number">Card number:</label>
-            <input type="text" id="card-number" name="card-number" inputmode="numeric" autocomplete="cc-number" placeholder="0000 0000 0000 0000" required>
-            <label for="card-expiry">Expiry (MM/YY):</label>
-            <input type="text" id="card-expiry" name="card-expiry" autocomplete="cc-exp" placeholder="MM/YY" required>
-            <label for="card-cvv">Security code:</label>
-            <input type="text" id="card-cvv" name="card-cvv" inputmode="numeric" autocomplete="cc-csc" maxlength="4" placeholder="000" required>
-          </fieldset>
-
-          <button type="submit">Place order</button>
-
-        </form>
-
-      </section>
-<!-- CHECKOUT CART -->
- <!-- This block of code was gotten from Learn Web Dev with Norbert and Adrian Twarog on Youtube -->
-      <section class="element" id="checkout">
-        <h3>Checkout Cart</h3>
-        
-        <h4>CSS selector:</h4>
-        <p>none</p>
-
-        <h4>Sample code:</h4>
-        <pre><code>&lt;table&gt;
-  &lt;caption&gt;Your order&lt;/caption&gt;
-  &lt;thead&gt;
-    &lt;tr&gt;
-      &lt;th scope="col"&gt;Item&lt;/th&gt;
-      &lt;th scope="col" class="numeric"&gt;Price&lt;/th&gt;
-      &lt;th scope="col" class="numeric"&gt;Quantity&lt;/th&gt;
-      &lt;th scope="col" class="numeric"&gt;Subtotal&lt;/th&gt;
-    &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;th scope="row"&gt;
-        &lt;img src="img/placeholderImg.png" alt="Chocolate chip cookie" class="cart-thumb"&gt;
-        Chocolate chip cookie
-      &lt;/th&gt;
-      &lt;td class="numeric"&gt;$3.00&lt;/td&gt;
-      &lt;td class="numeric"&gt;2&lt;/td&gt;
-      &lt;td class="numeric"&gt;$6.00&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;th scope="row"&gt;
-        &lt;img src="img/placeholderImg.png" alt="Butter croissant" class="cart-thumb"&gt;
-        Butter croissant
-      &lt;/th&gt;
-      &lt;td class="numeric"&gt;$4.50&lt;/td&gt;
-      &lt;td class="numeric"&gt;1&lt;/td&gt;
-      &lt;td class="numeric"&gt;$4.50&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;th scope="row"&gt;
-        &lt;img src="img/placeholderImg.png" alt="Blueberry muffin" class="cart-thumb"&gt;
-        Blueberry muffin
-      &lt;/th&gt;
-      &lt;td class="numeric"&gt;$3.75&lt;/td&gt;
-      &lt;td class="numeric"&gt;1&lt;/td&gt;
-      &lt;td class="numeric"&gt;$3.75&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-  &lt;tfoot&gt;
-    &lt;tr&gt;
-      &lt;th scope="row" colspan="3"&gt;Total&lt;/th&gt;
-      &lt;td class="numeric"&gt;$14.25&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tfoot&gt;
-&lt;/table&gt;
-
-&lt;div class="cart-actions"&gt;
-  &lt;a class="button-nav" href="checkout.html"&gt;Proceed to Checkout&lt;/a&gt;
-&lt;/div&gt;</code></pre>
-
-        <h4>Rendered element:</h4>
-        <table>
-          <caption>Your order</caption>
-          <thead>
-            <tr>
-              <th scope="col">Item</th>
-              <th scope="col" class="numeric">Price</th>
-              <th scope="col" class="numeric">Quantity</th>
-              <th scope="col" class="numeric">Subtotal</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <th scope="row" class="thItem">
-                <img src="img/chocolatechipcookie.jpg" alt="Chocolate chip cookie" class="cart-thumb">
-                Chocolate chip cookie
-              </th>
-              <td class="numeric">$3.00</td>
-              <td class="numeric">2</td>
-              <td class="numeric">$6.00</td>
-            </tr>
-            <tr>
-              <th scope="row" class="thItem">
-                <img src="img/buttercroissant.jpg" alt="Butter croissant" class="cart-thumb">
-                Butter croissant
-              </th>
-              <td class="numeric">$4.50</td>
-              <td class="numeric">1</td>
-              <td class="numeric">$4.50</td>
-            </tr>
-            <tr>
-              <th scope="row" class="thItem">
-                <img src="img/blueberrymuffin.jpg" alt="Blueberry muffin" class="cart-thumb">
-                Blueberry muffin
-              </th>
-              <td class="numeric">$3.75</td>
-              <td class="numeric">1</td>
-              <td class="numeric">$3.75</td>
-            </tr>
-          </tbody>
-          <tfoot>
-            <tr>
-              <th scope="row" colspan="3">Total</th>
-              <td class="numeric">$14.25</td>
-            </tr>
-          </tfoot>
-        </table>
-
-        <div class="cart-actions">
-          <a class="button-nav" href="checkout.html">Proceed to Checkout</a>
-        </div>
-
-      </section>
-
-    </section>
-    <!-- // COMBINED ELEMENTS SECTION -->
-
-
-
-    <!-- BRANDING SECTION // -->
-    <section id="branding">
-      <h2>Branding</h2>
-
-      <section class="element">
-        <h3>What does the company offer?</h3>
-        <ul>
-          <li>Sweet and savoury pastries, snacks and food</li>
-          <li>An indoor picnic experience for friends to enjoy together</li>
-          <li>Community events for regulars and people in the neighbourhood, possibly through a membership</li>
-          <li>Customers may bring in outside food, as long as they also purchase from the bakery</li>
+    <footer>
+      <p class="footerName">CinnaMunch</p>
+      <p>12345 72 Avenue, Surrey, BC V3W 2M1</p>
+      <nav aria-label="Footer">
+        <ul class="footerLinks">
+          <li><a href="about.html#contact">Contact</a></li>
+          <li><a href="styleguide.html">Style Guide</a></li>
+          <li><a href="citations.html">Citations</a></li>
         </ul>
-      </section>
-
-      <section class="element">
-        <h3>Who is the company to potential customers?</h3>
-        <p>If the bakery were a person, it would be a welcoming host who makes everyone feel at home.</p>
-        <ul>
-          <li>A chill spot to hang out with friends</li>
-          <li>A place to try new food and snacks</li>
-          <li>A study, work or date spot</li>
-        </ul>
-      </section>
-
-      <section class="element">
-        <h3>Why might someone purchase from this company?</h3>
-        <h4>To make a first purchase</h4>
-        <ul>
-          <li>A snack</li>
-          <li>Friendly customer service</li>
-          <li>A comfortable, inviting environment</li>
-        </ul>
-        <h4>To keep coming back</h4>
-        <ul>
-          <li>A sense of relationship and belonging</li>
-          <li>In-store exclusive events for members</li>
-        </ul>
-      </section>
-
-      <section class="element">
-        <h3>Fonts</h3>
-
-        <h4>Headings</h4>
-        <ul>
-          <li class="mileastSample">Mileast</li>
-        </ul>
-
-        <h4>Text, paragraphs and buttons</h4>
-        <ul>
-          <li class="montserratSample">Montserrat</li>
-        </ul>
-
-        <h4>Also considered</h4>
-        <ul>
-          <li>Freehand (headings)</li>
-          <li>Metropolis, Manrope, Metrophobic (text, paragraphs and buttons)</li>
-        </ul>
-      </section>
-
-      <!-- This section was gotten from W3Schools and several youtube videos -->
-      <section class="element">
-        <h3>Colour palette</h3>
-        <table>
-          <caption>Brand colours</caption>
-          <thead>
-            <tr>
-              <th scope="col">Colour</th>
-              <th scope="col">Hex code</th>
-              <th scope="col">Sample</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <th scope="row">Gold</th>
-              <td>#C9A227</td>
-              <td style="background-color: #C9A227">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
-            </tr>
-            <tr>
-              <th scope="row">Yellow</th>
-              <td>#F2C94C</td>
-              <td style="background-color: #F2C94C">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
-            </tr>
-            <tr>
-              <th scope="row">Brown</th>
-              <td>#6B4423</td>
-              <td style="background-color: #6B4423">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
-            </tr>
-            <tr>
-              <th scope="row">Cream</th>
-              <td>#FAF3E0</td>
-              <td style="background-color: #FAF3E0">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
-            </tr>
-          </tbody>
-        </table>
-      </section>
-
-      <section class="element">
-        <h3>Imagery and art direction</h3>
-        <ul>
-          <li>Calm</li>
-          <li>Minimalist</li>
-          <li>Realism</li>
-        </ul>
-
-        <div>
-          <img src="img/noodlek.jpg" class="artDirectionImg" alt="image of Noodlek web mockup">
-          <img src="img/plately.jpg" class="artDirectionImg" alt="image of Plately web mockup">
-        </div>
-      </section>
-
-    </section>
-    <!-- // BRANDING SECTION -->
-
-
-
-
-    <!-- // RESPONSIVE STRUCTURES SECTION  -->
-    <section id="responsive-structures">
-      <h2>Responsive Structures</h2>
-
-      <section class="element">
-        <h3>Check out the various pages below!</h3>
-        <a class="button-nav" href="productpage.html">Product Listing (multiple)</a>
-        <a class="button-nav" href="productdetail.html">Product Listing (single)</a>
-        <a class="button-nav" href="checkout.html">Checkout</a>
-        <a class="button-nav" href="confirmation.html">Payment Confirmation</a>
-        <a class="button-nav" href="about.html">About Us</a>
-        <a class="button-nav" href="events.html">Events</a>
-      </section>
-
-    </section>
-
-
-    <section id="citations">
-      <h2>Citations</h2>
-      <ul>
-        <li>Baumgartner, Beth. (2026). <strong>Blueberry Muffin [Photo]</strong>. The First Year Blog. <a href="https://thefirstyearblog.com/blueberry-muffins/">https://thefirstyearblog.com/blueberry-muffins/</a></li>
-        <li>IAT 339 Course Staff. (2026). <strong>Cookies and placeholder image [Photo]</strong>. Course starter files, Simon Fraser University.</li>
-        <li>La Levain. (n.d.). <strong>French Butter Croissant [Photo]</strong>. <a href="https://www.lalevain.com/product/french-butter-croissant/">https://www.lalevain.com/product/french-butter-croissant/</a></li>
-        <li>Mahrlig, Christin. (n.d.). <strong>Chewy Chocolate Chip Cookies [Photo]</strong>. <a href="https://spicysouthernkitchen.com/chewy-chocolate-chip-cookies/">https://spicysouthernkitchen.com/chewy-chocolate-chip-cookies/</a></li>
-        <li><strong>Noodlek web mockup [Image]</strong>. <a href="https://ca.pinterest.com/pin/1144618061587555015/">https://ca.pinterest.com/pin/1144618061587555015/</a></li>
-        <li><strong>Plately web mockup [Image]</strong>. <a href="https://ca.pinterest.com/pin/3448137211134950/">https://ca.pinterest.com/pin/3448137211134950/</a></li>
-        <li>Sronstudio. (2025). <strong>Mileast [Font]</strong>. FontSpace. <a href="https://www.fontspace.com/mileast-font-f136183">https://www.fontspace.com/mileast-font-f136183</a></li>
-        <li>Ulanovsky, Julieta, et al. (2011). <strong>Montserrat [Font]</strong>. Google Fonts. <a href="https://fonts.google.com/specimen/Montserrat">https://fonts.google.com/specimen/Montserrat</a></li>
-      </ul>
-      
-
-    </section>
-
-
+      </nav>
+      <p class="footerSmall">&copy; 2026 CinnaMunch. A student project for IAT 339.</p>
+    </footer>
 
   </body>
 </html>

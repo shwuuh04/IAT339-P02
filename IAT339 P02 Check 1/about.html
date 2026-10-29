@@ -16,17 +16,25 @@
 
     <nav aria-label="Main">
       <ul class="navBarList mileastSample">
-        <li id="logo"><a href="index.html" class="navBarButtons">CinnaMunch</a></li>
+        <li><a href="index.html" class="navBarButtons">CinnaMunch</a></li>
         <li><a href="index.html" class="navBarButtons">Home</a></li>
         <li><a href="productpage.html" class="navBarButtons">Menu</a></li>
         <li><a href="events.html" class="navBarButtons">Events</a></li>
-        <li><a href="about.html" class="navBarButtons">About Us</a></li>
+        <li><a href="about.html" class="navBarButtons" aria-current="page">About Us</a></li>
         <li><a href="about.html#contact" class="navBarButtons">Contact</a></li>
         <li><a href="checkout.html" class="navBarButtons"><img src="img/yourCart.png" alt="Cart"></a></li>
       </ul>
     </nav>
 
     <main>
+      <nav class="breadcrumbs" aria-label="Breadcrumb">
+        <div class="breadcrumbsLink">
+          <a href="index.html" class="breadcrumbsButton">Home</a>
+          <span class="breadcrumbsArrow" aria-hidden="true">&raquo;</span>
+          <span class="breadcrumbsCurrent" aria-current="page">About Us</span>
+        </div>
+      </nav>
+
       <h1>About CinnaMunch</h1>
       <p>Welcome to Cinnamunch! We're a bakery dedicated to making fresh, delicious treats for every occasion. From cinnamon rolls to classic baked goods, we love bringing people together over good food. Whether you're stopping by for a quick snack or picking up something to share, we've got something sweet waiting for you!</p>
 
@@ -37,7 +45,6 @@
       <p>Saturday - Sunday: 8:00 AM - 5:00 PM</p>
 
       <h2 id="contact">Contact Us</h2>
-      <!-- <p>Placeholder text about how to reach us by phone or email.</p> -->
 
       <form action="#" method="post">
         <fieldset>
@@ -52,11 +59,20 @@
         <button type="submit">Send message</button>
       </form>
 
-      <p>
-        <a class="button-nav" href="index.html">Back to homepage</a>
-        <a class="button-nav" href="productpage.html">See the menu</a>
-      </p>
     </main>
+
+    <footer>
+      <p class="footerName">CinnaMunch</p>
+      <p>12345 72 Avenue, Surrey, BC V3W 2M1</p>
+      <nav aria-label="Footer">
+        <ul class="footerLinks">
+          <li><a href="about.html#contact">Contact</a></li>
+          <li><a href="styleguide.html">Style Guide</a></li>
+          <li><a href="citations.html">Citations</a></li>
+        </ul>
+      </nav>
+      <p class="footerSmall">&copy; 2026 CinnaMunch. A student project for IAT 339.</p>
+    </footer>
 
   </body>
 </html>

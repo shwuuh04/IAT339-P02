@@ -217,16 +217,19 @@ header nav a {
   background-color: var(--color-cream);
   color: var(--color-brown);
   box-shadow: inset 0 -0.35rem 0 var(--color-gold);
+  border: 3px solid var(--color-brown);
+  border-bottom: none;
 }
 
 .breadcrumbs {
-  margin-bottom: 1rem;
+  margin-top: 1rem;
 }
 
 .breadcrumbsLink {
   display:flex;
   flex-wrap: wrap;
   align-items: center;
+  justify-content: center;
 }
 
 .breadcrumbsButton {

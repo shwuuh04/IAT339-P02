@@ -217,8 +217,11 @@ header nav a {
   background-color: var(--color-cream);
   color: var(--color-brown);
   box-shadow: inset 0 -0.35rem 0 var(--color-gold);
-  border: 3px solid var(--color-brown);
-  border-bottom: none;  
+}
+
+/* the cart icon is white; flip it dark on the cream active tab */
+.navBarButtons[aria-current] img {
+  filter: invert(1);
 }
 
 .breadcrumbs {
@@ -634,40 +637,50 @@ footer p {
 .heroTagline {
   font-family: var(--font-heading);
   font-size: 1.4rem;
-  color: var(--color-gold);
-  margin: 1rem auto 2rem;
-  margin-top: 5rem;
-}
-
-.heroImage{
-z-index: -1;
-width: 100vw;
-height: 40vh;
-object-fit: cover;
-
-display:flex;
-flex-wrap:wrap;
-justify-content: center;
-
+  color: var(--color-cream);
+  margin: 0;
 }
 
 .heroImageContainer {
-  display:flex;
-  flex-wrap:wrap;
-  justify-content: center;
-  gap: 1rem;
-  padding-top: 2rem;
   position: relative;
+  margin-top: 2rem;
 }
 
+.heroImage {
+  display: block;
+  width: 100%;
+  height: 40vh;
+  min-height: 15rem;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+/* dark panel so the text stays readable on top of the busy photo */
 .heroButtonContainer {
-  display:flex;
-  flex-wrap:wrap;
-  justify-content: center;
-  gap: 1rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: max-content;
+  max-width: 90%;
+  display: flex;
   flex-direction: column;
   align-items: center;
-  position:absolute;
+  gap: 1rem;
+  padding: 1.5rem 2rem;
+  background-color: rgba(43, 29, 14, 0.75);
+  border-radius: 8px;
+}
+
+.heroButtonContainer .button-nav {
+  background-color: var(--color-gold);
+  color: var(--color-text);
+  font-weight: 700;
+}
+
+.heroButtonContainer .button-nav:hover,
+.heroButtonContainer .button-nav:focus {
+  background-color: var(--color-cream);
 }
 
 .heroInfo {
@@ -789,4 +802,31 @@ justify-content: center;
   text-align: center;
   margin-top: 0.75rem;
   font-weight: 700;
+}
+
+
+/*
+  PRODUCT DETAIL PAGE -------------------
+  Image on the left, text on the right; wraps to one column on small screens
+*/
+
+.productDetail {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  align-items: flex-start;
+  margin-bottom: 2rem;
+}
+
+.productDetail .product-detail-img {
+  flex: 0 1 24em;
+}
+
+.productInfo {
+  flex: 1 1 20em;
+}
+
+.productInfo .price {
+  font-size: 1.5rem;
+  margin-top: 0;
 }

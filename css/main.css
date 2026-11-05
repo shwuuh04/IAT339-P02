@@ -830,3 +830,75 @@ footer p {
   font-size: 1.5rem;
   margin-top: 0;
 }
+
+
+/*
+  MOBILE MENU (CSS ONLY) -------------------
+  A hidden checkbox remembers open/closed; its label is the menu button.
+  Wide screens: both are hidden and the navbar shows as normal.
+*/
+
+nav[aria-label^="Main"] {
+  position: relative;
+}
+
+.menuToggle,
+.menuButton {
+  display: none;
+}
+
+@media (max-width: 53em) {
+  /* the checkbox stays focusable for keyboard users, but is invisible */
+  .menuToggle {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 1px;
+    height: 1px;
+    opacity: 0;
+  }
+
+  .menuButton {
+    display: block;
+    padding: 1rem;
+    background-color: var(--color-brown);
+    color: var(--color-cream);
+    font-family: var(--font-heading);
+    font-size: 1.5rem;
+    cursor: pointer;
+  }
+
+  .menuToggle:focus-visible + .menuButton {
+    outline: 3px solid var(--color-gold);
+    outline-offset: -3px;
+  }
+
+  /* links hidden until the checkbox is ticked, then stacked in one column */
+  .navBarList {
+    display: none;
+    flex-direction: column;
+    flex-wrap: nowrap;
+  }
+
+  .menuToggle:checked ~ .navBarList {
+    display: flex;
+  }
+
+  .navBarButtons {
+    height: auto;
+    line-height: 1.6;
+    padding: 1rem;
+  }
+
+  .navBarButtons img {
+    height: 2.4rem;
+    vertical-align: middle;
+  }
+}
+
+/* Product card photos: every photo is cropped to the same square so mixed sizes still line up */
+.cardImg {
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+}

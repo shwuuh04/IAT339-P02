@@ -234,10 +234,13 @@
         <h3>Main Navigation</h3>
 
         <h4>CSS selector:</h4>
-        <p>.navBarList, .navBarButtons</p>
+        <p>.navBarList, .navBarButtons, .menuToggle, .menuButton</p>
+        <p>On screens narrower than 53em the links collapse behind a ☰ Menu button. It uses no JavaScript: a hidden checkbox remembers whether the menu is open, and the label is the button. Resize the window to see it.</p>
 
         <h4>Sample code:</h4>
         <pre><code>&lt;nav aria-label="Main"&gt;
+  &lt;input type="checkbox" id="menuToggle" class="menuToggle"&gt;
+  &lt;label for="menuToggle" class="menuButton"&gt;&amp;#9776; Menu&lt;/label&gt;
   &lt;ul class="navBarList mileastSample"&gt;
     &lt;li&gt;&lt;a href="index.html" class="navBarButtons"&gt;CinnaMunch&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href="index.html" class="navBarButtons"&gt;Home&lt;/a&gt;&lt;/li&gt;
@@ -251,6 +254,8 @@
 
         <h4>Rendered element:</h4>
         <nav aria-label="Main">
+          <input type="checkbox" id="menuToggle" class="menuToggle">
+          <label for="menuToggle" class="menuButton">&#9776; Menu</label>
           <ul class="navBarList mileastSample">
             <li><a href="index.html" class="navBarButtons">CinnaMunch</a></li>
             <li><a href="index.html" class="navBarButtons">Home</a></li>
@@ -320,7 +325,7 @@
       &lt;li&gt;&lt;a href="about.html#contact"&gt;Contact&lt;/a&gt;&lt;/li&gt;
       &lt;li&gt;&lt;a href="styleguide.html"&gt;Style Guide&lt;/a&gt;&lt;/li&gt;
       &lt;li&gt;&lt;a href="citations.html"&gt;Citations&lt;/a&gt;&lt;/li&gt;
-          &lt;li&gt;&lt;a href="https://github.com/YOUR-USERNAME/IAT339-P02"&gt;GitHub&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href="https://github.com/shwuuh04/IAT339-P02"&gt;GitHub&lt;/a&gt;&lt;/li&gt;
     &lt;/ul&gt;
   &lt;/nav&gt;
   &lt;p class="footerSmall"&gt;&amp;copy; 2026 CinnaMunch. A student project for IAT 339.&lt;/p&gt;
@@ -335,7 +340,7 @@
               <li><a href="about.html#contact">Contact</a></li>
               <li><a href="styleguide.html">Style Guide</a></li>
               <li><a href="citations.html">Citations</a></li>
-          <li><a href="https://github.com/YOUR-USERNAME/IAT339-P02">GitHub</a></li>
+          <li><a href="https://github.com/shwuuh04/IAT339-P02">GitHub</a></li>
             </ul>
           </nav>
           <p class="footerSmall">&copy; 2026 CinnaMunch. A student project for IAT 339.</p>
@@ -363,22 +368,22 @@
             <img src="img/chocolatechipcookie.jpg" alt="Chocolate chip cookie" class="cardImg">
             <h4>Chocolate chip cookie</h4>
             <p class="price">$3.00</p>
-            <a href="#">View details</a>
-            <a href="#">Add to cart</a>
+            <a href="productdetail.html">View details</a>
+            <a href="checkout.html">Add to cart</a>
           </div>
           <div class="contentContainer montserratSample">
             <img src="img/buttercroissant.jpg" alt="Butter croissant" class="cardImg">
             <h4>Butter croissant</h4>
             <p class="price">$4.50</p>
-            <a href="#">View details</a>
-            <a href="#">Add to cart</a>
+            <a href="productdetail-croissant.html">View details</a>
+            <a href="checkout.html">Add to cart</a>
           </div>
           <div class="contentContainer montserratSample">
             <img src="img/blueberrymuffin.jpg" alt="Blueberry muffin" class="cardImg">
             <h4>Blueberry muffin</h4>
             <p class="price">$3.75</p>
-            <a href="#">View details</a>
-            <a href="#">Add to cart</a>
+            <a href="productdetail-muffin.html">View details</a>
+            <a href="checkout.html">Add to cart</a>
           </div>
         </div>
       </section>

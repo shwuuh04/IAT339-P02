@@ -429,6 +429,17 @@ input[type="radio"] {
   flex-grow: 1;
 }
 
+.articleContainer {
+  background-color: #fff;
+  border: 1px solid var(--color-gold);
+  border-radius: 8px;
+  padding-left: 1rem;
+  margin-bottom: 1rem;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+}
+
 .cardImg {
   width: 100%;
   height: auto;

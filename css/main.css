@@ -116,13 +116,14 @@ th, td {
 
 .thItem {
   display: flex;
+  align-items: center;
+  gap: 0.5rem;
 }
 
 thead th {
   background-color: var(--color-brown);
   color: var(--color-cream);
 }
-
 
 tfoot th, tfoot td {
   font-weight: 700;
@@ -391,7 +392,18 @@ input[type="radio"] {
 
   #confirmationContainer {
     padding: 1rem;
-    overflow-x: auto;
+  }
+
+  #confirmationContainer th,
+  #confirmationContainer td {
+    padding: 0.4rem 0.25rem;
+    overflow-wrap: anywhere;
+  }
+
+  #confirmationContainer .cart-thumb {
+    width: 30px;
+    height: 30px;
+    flex-shrink: 0;
   }
 
   .navBarButtons {
@@ -579,9 +591,16 @@ form {
   border: 1px solid var(--color-gold);
   border-radius: 8px;
   padding: 2rem;
+  width: 100%;
   max-width: 600px;
   box-sizing: border-box;
   margin: 2rem 0;
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+
+#confirmationContainer table {
+  min-width: 500px;
 }
 
 #orderBold {

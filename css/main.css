@@ -199,6 +199,7 @@ header nav a {
   box-sizing: border-box;
   height: 4.6rem;
   line-height: 2.8rem;
+  border: 2px solid var(--color-brown);
 }
 
 .navBarButtons img {
@@ -905,6 +906,34 @@ nav[aria-label^="Main"] {
   .navBarButtons img {
     height: 2.4rem;
     vertical-align: middle;
+  }
+
+  /* shrinking the size of the product cards so they can fit side by side on mobile. card size is calculated by (50% of the screen width - inbetween padding) */
+
+  .product-grid {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    flex-direction: row;
+    padding: 0;
+    gap: 1rem;
+  }
+
+  .contentContainer {
+    background-color: #fff;
+    border: 1px solid var(--color-gold);
+    border-radius: 8px;
+    box-sizing: border-box;
+    width: calc(50% - 0.5rem);
+    min-width: 0;
+    padding: 0.75rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .contentContainer h4 {
+    flex-grow: 1;
   }
 }
 

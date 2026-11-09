@@ -390,6 +390,10 @@ input[type="radio"] {
     padding: 0.5rem 0.4rem;
   }
 
+  .thItem {
+    gap: 0.25rem;
+  }
+
   #confirmationContainer {
     padding: 1rem;
   }
@@ -539,6 +543,12 @@ fieldset input[type="radio"] + label {
 .cart-actions {
   text-align: right;
   margin-top: 1rem;
+}
+
+.confirmationActions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
 }
 
 #citations a {

@@ -231,7 +231,7 @@
       <h2>Combined Elements</h2>
 
       <section class="element">
-        <h3>Main Navigation</h3>
+        <h3 id="mainNav">Main Navigation</h3>
 
         <h4>CSS selector:</h4>
         <p>.navBarList, .navBarButtons, .menuToggle, .menuButton</p>
@@ -242,13 +242,13 @@
   &lt;input type="checkbox" id="menuToggle" class="menuToggle"&gt;
   &lt;label for="menuToggle" class="menuButton"&gt;&amp;#9776; Menu&lt;/label&gt;
   &lt;ul class="navBarList mileastSample"&gt;
-    &lt;li&gt;&lt;a href="index.html" class="navBarButtons"&gt;CinnaMunch&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href="index.html" class="navBarButtons"&gt;Home&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href="productpage.html" class="navBarButtons" aria-current="page"&gt;Menu&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href="events.html" class="navBarButtons"&gt;Events&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href="about.html" class="navBarButtons"&gt;About Us&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href="about.html#contact" class="navBarButtons"&gt;Contact&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href="checkout.html" class="navBarButtons"&gt;&lt;img src="img/yourCart.png" alt="Cart"&gt;&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="" class="navBarButtons"&gt;CinnaMunch&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="" class="navBarButtons"&gt;Home&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="" class="navBarButtons" aria-current="page"&gt;Menu&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="" class="navBarButtons"&gt;Events&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="" class="navBarButtons"&gt;About Us&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="" class="navBarButtons"&gt;Contact&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="" class="navBarButtons"&gt;&lt;img src="img/yourCart.png" alt="Cart"&gt;&lt;/a&gt;&lt;/li&gt;
   &lt;/ul&gt;
 &lt;/nav&gt;</code></pre>
 
@@ -256,16 +256,17 @@
         <nav aria-label="Main">
           <input type="checkbox" id="menuToggle" class="menuToggle">
           <label for="menuToggle" class="menuButton">&#9776; Menu</label>
-          <ul class="navBarList mileastSample">
-            <li><a href="index.html" class="navBarButtons">CinnaMunch</a></li>
-            <li><a href="index.html" class="navBarButtons">Home</a></li>
-            <li><a href="productpage.html" class="navBarButtons" aria-current="page">Menu</a></li>
-            <li><a href="events.html" class="navBarButtons">Events</a></li>
-            <li><a href="about.html" class="navBarButtons">About Us</a></li>
-            <li><a href="about.html#contact" class="navBarButtons">Contact</a></li>
-            <li><a href="checkout.html" class="navBarButtons"><img src="img/yourCart.png" alt="Cart"></a></li>
+          <ul class="navBarList mileastSample" id="scrollToNav">
+            <li><a href="" class="navBarButtons" id="logo">CinnaMunch</a></li>
+            <li><a href="" class="navBarButtons" aria-current="page" id="home">Home</a></li>
+            <li><a href="" class="navBarButtons">Menu</a></li>
+            <li><a href="" class="navBarButtons">Events</a></li>
+            <li><a href="" class="navBarButtons">About Us</a></li>
+            <li><a href="" class="navBarButtons">Contact</a></li>
+            <li><a href="" class="navBarButtons"><img src="img/yourCart.png" alt="Cart"></a></li>
           </ul>
         </nav>
+        <script src="scripts/navBarScript.js"></script>
       </section>
 
       <section class="element">
@@ -277,6 +278,9 @@
 
         <h4>Sample code:</h4>
         <pre><code>&lt;a href="productpage.html" class="navBarButtons" aria-current="page"&gt;Menu&lt;/a&gt;</code></pre>
+
+        <h4>Rendered element:</h4>
+        <p>Test out the <a href="#mainNav">Main Navigation</a> above to see the active link.</p>
       </section>
 
       <section class="element">

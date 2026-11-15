@@ -442,7 +442,23 @@ input[type="radio"] {
   flex-direction: column;
 }
 
-.contentContainer h4 {
+/* Card names are real headings (h2/h3) so the outline has no skipped levels,
+   but they keep the small uppercase label look the cards had before */
+.cardTitle {
+  font-family: var(--font-body);
+  font-style: normal;
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--color-brown);
+  margin-top: 1rem;
+  margin-bottom: 0.4rem;
+  padding-bottom: 0;
+  border-bottom: none;
+}
+
+.contentContainer .cardTitle {
   flex-grow: 1;
 }
 
@@ -542,6 +558,14 @@ fieldset input[type="radio"] + label {
 
 .cart-actions {
   text-align: right;
+  margin-top: 1rem;
+}
+
+/* A row of buttons that wraps with even space between and around them */
+.buttonRow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
   margin-top: 1rem;
 }
 
@@ -961,7 +985,7 @@ nav[aria-label^="Main"] {
     flex-direction: column;
   }
 
-  .contentContainer h4 {
+  .contentContainer .cardTitle {
     flex-grow: 1;
   }
 }
@@ -970,4 +994,11 @@ nav[aria-label^="Main"] {
 .cardImg {
   aspect-ratio: 1 / 1;
   object-fit: cover;
+}
+
+/* Style guide: small label showing where each element sits in atomic design */
+.atomicLevel {
+  margin: 0.25rem 0 0.75rem;
+  font-size: 0.9rem;
+  color: var(--color-brown);
 }

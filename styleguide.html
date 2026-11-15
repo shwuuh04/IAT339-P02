@@ -21,6 +21,7 @@
 
       <nav aria-label="Style guide contents">
         <a href="index.html">CinnaMunch Home Page</a>
+        <a href="#atomic_design">Atomic Design</a>
         <a href="#interactive_elements">Interactive Elements</a>
         <a href="#text_elements">Text Elements</a>
         <a href="#combined_elements">Combined Elements</a>
@@ -36,10 +37,30 @@
       </nav>
     </header>
 
+    <!-- ATOMIC DESIGN SECTION // -->
+    <section id="atomic_design">
+      <h2>How This Guide Is Organised: Atomic Design</h2>
+      <p>CinnaMunch is built with atomic design: small, reusable pieces are combined into bigger ones, so every page looks and behaves the same way.</p>
+      <table>
+        <caption>Atomic design levels used on this site</caption>
+        <thead>
+          <tr><th scope="col">Level</th><th scope="col">What it is</th><th scope="col">CinnaMunch examples</th></tr>
+        </thead>
+        <tbody>
+          <tr><th scope="row">Atoms</th><td>The smallest pieces, which cannot be split up and still work</td><td>Links, buttons, inputs, labels, headings, paragraphs, colours and fonts</td></tr>
+          <tr><th scope="row">Molecules</th><td>A few atoms working together as one unit</td><td>Breadcrumbs, product card, promo card, form field with label</td></tr>
+          <tr><th scope="row">Organisms</th><td>Larger sections made of molecules and atoms</td><td>Main navigation, hero, ticker, product grid, payment form, cart, footer</td></tr>
+          <tr><th scope="row">Templates and pages</th><td>Organisms arranged into a layout, then filled with real content</td><td>Homepage, menu, product detail, checkout, confirmation, events, about</td></tr>
+        </tbody>
+      </table>
+    </section>
+    <!-- // ATOMIC DESIGN SECTION -->
+
 
     <!-- INTERACTIVE ELEMENTS SECTION // -->
     <section id="interactive_elements">
       <h2>Interactive Elements</h2>
+      <p class="atomicLevel"><strong>Atomic level:</strong> Atoms</p>
 
 
       <section class="element">
@@ -156,6 +177,7 @@
     <!-- TEXT ELEMENTS SECTION // -->
     <section id="text_elements">
       <h2>Text Elements</h2>
+      <p class="atomicLevel"><strong>Atomic level:</strong> Atoms</p>
 
       <section class="element">
         <h3>Headings</h3>
@@ -229,26 +251,29 @@
     <!-- COMBINED ELEMENTS SECTION // -->
     <section id="combined_elements">
       <h2>Combined Elements</h2>
+      <p class="atomicLevel"><strong>Atomic level:</strong> Molecules and organisms (each element below is labelled)</p>
 
       <section class="element">
         <h3 id="mainNav">Main Navigation</h3>
+        <p class="atomicLevel"><strong>Atomic level:</strong> Organism</p>
 
         <h4>CSS selector:</h4>
         <p>.navBarList, .navBarButtons, .menuToggle, .menuButton</p>
         <p>On screens narrower than 53em the links collapse behind a ☰ Menu button. It uses no JavaScript: a hidden checkbox remembers whether the menu is open, and the label is the button. Resize the window to see it.</p>
+        <p>The rendered example below is a demo: its links stay on this page, and a small script (<a href="scripts/navBarScript.js">scripts/navBarScript.js</a>) moves the active highlight to the link you click. On the real pages each link goes to its page and <code style="display:inline;padding:0.1rem 0.3rem">aria-current</code> is set in the HTML.</p>
 
         <h4>Sample code:</h4>
         <pre><code>&lt;nav aria-label="Main"&gt;
   &lt;input type="checkbox" id="menuToggle" class="menuToggle"&gt;
   &lt;label for="menuToggle" class="menuButton"&gt;&amp;#9776; Menu&lt;/label&gt;
   &lt;ul class="navBarList mileastSample"&gt;
-    &lt;li&gt;&lt;a href="" class="navBarButtons"&gt;CinnaMunch&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href="" class="navBarButtons"&gt;Home&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href="" class="navBarButtons" aria-current="page"&gt;Menu&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href="" class="navBarButtons"&gt;Events&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href="" class="navBarButtons"&gt;About Us&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href="" class="navBarButtons"&gt;Contact&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href="" class="navBarButtons"&gt;&lt;img src="img/yourCart.png" alt="Cart"&gt;&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="index.html" class="navBarButtons"&gt;CinnaMunch&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="index.html" class="navBarButtons"&gt;Home&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="productpage.html" class="navBarButtons" aria-current="page"&gt;Menu&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="events.html" class="navBarButtons"&gt;Events&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="about.html" class="navBarButtons"&gt;About Us&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="about.html#contact" class="navBarButtons"&gt;Contact&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="checkout.html" class="navBarButtons"&gt;&lt;img src="img/yourCart.png" alt="Cart"&gt;&lt;/a&gt;&lt;/li&gt;
   &lt;/ul&gt;
 &lt;/nav&gt;</code></pre>
 
@@ -257,20 +282,20 @@
           <input type="checkbox" id="menuToggle" class="menuToggle">
           <label for="menuToggle" class="menuButton">&#9776; Menu</label>
           <ul class="navBarList mileastSample" id="scrollToNav">
-            <li><a href="" class="navBarButtons" id="logo">CinnaMunch</a></li>
-            <li><a href="" class="navBarButtons" aria-current="page" id="home">Home</a></li>
-            <li><a href="" class="navBarButtons">Menu</a></li>
-            <li><a href="" class="navBarButtons">Events</a></li>
-            <li><a href="" class="navBarButtons">About Us</a></li>
-            <li><a href="" class="navBarButtons">Contact</a></li>
-            <li><a href="" class="navBarButtons"><img src="img/yourCart.png" alt="Cart"></a></li>
+            <li><a href="#" class="navBarButtons" id="logo">CinnaMunch</a></li>
+            <li><a href="#" class="navBarButtons" id="home" aria-current="page">Home</a></li>
+            <li><a href="#" class="navBarButtons">Menu</a></li>
+            <li><a href="#" class="navBarButtons">Events</a></li>
+            <li><a href="#" class="navBarButtons">About Us</a></li>
+            <li><a href="#" class="navBarButtons">Contact</a></li>
+            <li><a href="#" class="navBarButtons"><img src="img/yourCart.png" alt="Cart"></a></li>
           </ul>
         </nav>
-        <script src="scripts/navBarScript.js"></script>
       </section>
 
       <section class="element">
         <h3>Active Navigation Link</h3>
+        <p class="atomicLevel"><strong>Atomic level:</strong> Atom (a state of the navigation link)</p>
         <p>The link for the page the visitor is on is highlighted: cream background, brown text and a gold bar along the bottom. It is set with the <code style="display:inline;padding:0.1rem 0.3rem">aria-current</code> attribute, so screen readers announce it as well. Use <code style="display:inline;padding:0.1rem 0.3rem">aria-current="page"</code> on the exact page and <code style="display:inline;padding:0.1rem 0.3rem">aria-current="true"</code> for a section the page belongs to (for example, Menu on a product detail page).</p>
 
         <h4>CSS selector:</h4>
@@ -285,6 +310,7 @@
 
       <section class="element">
         <h3>Breadcrumbs</h3>
+        <p class="atomicLevel"><strong>Atomic level:</strong> Molecule</p>
         <p>Center-aligned trail at the top of every page except the homepage. The last item is the current page and is not a link.</p>
 
         <h4>CSS selector:</h4>
@@ -315,7 +341,8 @@
 
       <section class="element">
         <h3>Footer</h3>
-        <p>Appears at the bottom of every page and links to the Style Guide and the Citations page.</p>
+        <p class="atomicLevel"><strong>Atomic level:</strong> Organism</p>
+        <p>Appears at the bottom of every page and links to Contact, the Style Guide, the Citations page and the project’s GitHub repository.</p>
 
         <h4>CSS selector:</h4>
         <p>footer, .footerName, .footerLinks, .footerSmall</p>
@@ -353,14 +380,15 @@
 
       <section class="element" id="product_listing">
         <h3>Product/Service Listing</h3>
+        <p class="atomicLevel"><strong>Atomic level:</strong> Molecule (the card), repeated inside an organism (the product grid)</p>
 
         <h4>CSS selector:</h4>
-        .contentContainer, .cardImg
+        .contentContainer, .cardImg, .cardTitle (on the homepage a card name is an h3 and on the menu page an h2, so the heading levels never skip; .cardTitle keeps the same look)
 
         <h4>Sample code:</h4>
         <pre><code>&lt;div class="contentContainer"&gt;
   &lt;img src="img/placeholderImg.png" alt="Name of product" class="cardImg"&gt;
-  &lt;h4&gt;Name of Product&lt;/h4&gt;
+  &lt;h4 class="cardTitle"&gt;Name of Product&lt;/h4&gt;
   &lt;p class="price"&gt;$0.00&lt;/p&gt;
   &lt;a href="#"&gt;View details&lt;/a&gt;
   &lt;a href="#"&gt;Add to cart&lt;/a&gt;
@@ -370,21 +398,21 @@
         <div class="product-grid">
           <div class="contentContainer montserratSample">
             <img src="img/chocolatechipcookie.jpg" alt="Chocolate chip cookie" class="cardImg">
-            <h4>Chocolate chip cookie</h4>
+            <h4 class="cardTitle">Chocolate chip cookie</h4>
             <p class="price">$3.00</p>
             <a href="productdetail.html">View details</a>
             <a href="checkout.html">Add to cart</a>
           </div>
           <div class="contentContainer montserratSample">
             <img src="img/buttercroissant.jpg" alt="Butter croissant" class="cardImg">
-            <h4>Butter croissant</h4>
+            <h4 class="cardTitle">Butter croissant</h4>
             <p class="price">$4.50</p>
             <a href="productdetail-croissant.html">View details</a>
             <a href="checkout.html">Add to cart</a>
           </div>
           <div class="contentContainer montserratSample">
             <img src="img/blueberrymuffin.jpg" alt="Blueberry muffin" class="cardImg">
-            <h4>Blueberry muffin</h4>
+            <h4 class="cardTitle">Blueberry muffin</h4>
             <p class="price">$3.75</p>
             <a href="productdetail-muffin.html">View details</a>
             <a href="checkout.html">Add to cart</a>
@@ -396,6 +424,7 @@
  <!-- This block of code was gotten through W3Schools and Codehal and Mr. Web Designer on Youtube -->
       <section class="element" id="payment_form">
         <h3>Payment Form</h3>
+        <p class="atomicLevel"><strong>Atomic level:</strong> Organism</p>
 
         <h4>CSS selector:</h4>
         <p>input[type="radio"], input[type="text"], input[type="email"]</p>
@@ -487,6 +516,7 @@
  <!-- This block of code was gotten from Learn Web Dev with Norbert and Adrian Twarog on Youtube -->
       <section class="element" id="checkout">
         <h3>Checkout Cart</h3>
+        <p class="atomicLevel"><strong>Atomic level:</strong> Organism</p>
 
         <h4>CSS selector:</h4>
         <p>none</p>
@@ -597,6 +627,115 @@
 
       </section>
 
+
+      <section class="element">
+        <h3>Homepage Hero</h3>
+        <p class="atomicLevel"><strong>Atomic level:</strong> Organism</p>
+        <p>The first thing a visitor sees: the CinnaMunch wordmark, a hero photo with a tagline and a call-to-action button over a dark panel, and a row of opening hours, address and pick-up information. See it live on the <a href="index.html">homepage</a>.</p>
+
+        <h4>CSS selector:</h4>
+        <p>.hero, .wordmark, .heroImageContainer, .heroImage, .heroButtonContainer, .heroTagline, .heroInfo</p>
+
+        <h4>Sample code:</h4>
+        <pre><code>&lt;section class="hero"&gt;
+  &lt;h1 class="wordmark"&gt;CinnaMunch&lt;/h1&gt;
+  &lt;div class="heroImageContainer"&gt;
+    &lt;img src="img/heroBanner.jpeg" alt="hero image of numerous baked goods" class="heroImage"&gt;
+    &lt;div class="heroButtonContainer"&gt;
+      &lt;p class="heroTagline"&gt;A bakery with an indoor, cozy picnic-like experience&lt;/p&gt;
+      &lt;a class="button-nav" href="productpage.html"&gt;Browse the menu&lt;/a&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class="heroInfo"&gt;...hours, address, pick-up...&lt;/div&gt;
+&lt;/section&gt;</code></pre>
+      </section>
+
+      <section class="element">
+        <h3>Scrolling Ticker</h3>
+        <p class="atomicLevel"><strong>Atomic level:</strong> Organism</p>
+        <p>A banner of short messages that scrolls sideways with CSS only (no JavaScript). The messages are written twice and the track slides left by half its width, so the loop has no visible jump. It is hidden from screen readers with <code style="display:inline;padding:0.1rem 0.3rem">aria-hidden="true"</code> because it repeats content, and it stops moving for visitors who ask their device to reduce motion.</p>
+
+        <h4>CSS selector:</h4>
+        <p>.ticker, .tickerTrack, @keyframes, @media (prefers-reduced-motion: reduce)</p>
+
+        <h4>Sample code:</h4>
+        <pre><code>&lt;div class="ticker" aria-hidden="true"&gt;
+  &lt;div class="tickerTrack"&gt;
+    &lt;span&gt;FRESH BAKED DAILY!&lt;/span&gt;&lt;span&gt;ORDER A DAY AHEAD!&lt;/span&gt;
+    &lt;span&gt;FRESH BAKED DAILY!&lt;/span&gt;&lt;span&gt;ORDER A DAY AHEAD!&lt;/span&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+
+        <h4>Rendered element:</h4>
+        <div class="ticker" aria-hidden="true">
+          <div class="tickerTrack"><span>FRESH BAKED DAILY!</span><span>ORDER A DAY AHEAD!</span><span>COZY PICNIC SEATING!</span><span>FRESH BAKED DAILY!</span><span>ORDER A DAY AHEAD!</span><span>COZY PICNIC SEATING!</span></div>
+        </div>
+      </section>
+
+      <section class="element">
+        <h3>Promo Card</h3>
+        <p class="atomicLevel"><strong>Atomic level:</strong> Molecule, repeated inside an organism (the “What’s New” grid)</p>
+        <p>A short announcement with a heading, one or two lines of text and a link to the full story on the Events page. The cards sit in a responsive grid.</p>
+
+        <h4>CSS selector:</h4>
+        <p>.promoGrid, .promoCard</p>
+
+        <h4>Sample code:</h4>
+        <pre><code>&lt;div class="promoGrid"&gt;
+  &lt;article class="promoCard"&gt;
+    &lt;h3&gt;Spooky Treats Are Here!&lt;/h3&gt;
+    &lt;p&gt;Limited-time pumpkin goodies and Halloween-themed cookies.&lt;/p&gt;
+    &lt;a href="events.html#spooky-treats"&gt;Read more&lt;/a&gt;
+  &lt;/article&gt;
+&lt;/div&gt;</code></pre>
+
+        <h4>Rendered element:</h4>
+        <div class="promoGrid">
+          <article class="promoCard">
+            <h3>Spooky Treats Are Here!</h3>
+            <p>Limited-time pumpkin goodies and Halloween-themed cookies. Grab something spooky before they’re gone.</p>
+            <a href="events.html#spooky-treats">Read more</a>
+          </article>
+        </div>
+      </section>
+
+      <section class="element">
+        <h3>Product Detail Layout</h3>
+        <p class="atomicLevel"><strong>Atomic level:</strong> Organism</p>
+        <p>The product photo sits beside the text (price, description, add-to-cart button and ingredients). When the screen is too narrow for both, the text wraps below the photo. This uses flexbox with <code style="display:inline;padding:0.1rem 0.3rem">flex-wrap</code> and a <code style="display:inline;padding:0.1rem 0.3rem">flex-basis</code> on each side, so no media query is needed. See it live on the <a href="productdetail.html">cookie page</a>.</p>
+
+        <h4>CSS selector:</h4>
+        <p>.productDetail, .product-detail-img, .productInfo</p>
+
+        <h4>Sample code:</h4>
+        <pre><code>&lt;div class="productDetail"&gt;
+  &lt;img src="img/chocolatechipcookie.jpg" alt="Chocolate chip cookie" class="product-detail-img"&gt;
+  &lt;div class="productInfo"&gt;
+    &lt;p class="price"&gt;&lt;strong&gt;$3.00&lt;/strong&gt;&lt;/p&gt;
+    &lt;p&gt;A soft, chewy chocolate chip cookie...&lt;/p&gt;
+    &lt;a class="button-nav" href="checkout.html"&gt;Add to cart&lt;/a&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+
+        <h4>Rendered element:</h4>
+        <div class="productDetail">
+          <img src="img/chocolatechipcookie.jpg" alt="Chocolate chip cookie" class="product-detail-img">
+          <div class="productInfo">
+            <p class="price"><strong>$3.00</strong></p>
+            <p>A soft, chewy chocolate chip cookie with a slightly crispy edge and plenty of chocolate chips.</p>
+            <a class="button-nav" href="checkout.html">Add to cart</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="element">
+        <h3>Order Confirmation</h3>
+        <p class="atomicLevel"><strong>Atomic level:</strong> Organism</p>
+        <p>A bordered box that repeats the order number, pickup details and an itemised table, followed by two buttons (back to the homepage, keep browsing). On narrow screens the table scrolls inside the box instead of making the whole page scroll. See it live on the <a href="confirmation.html">confirmation page</a>.</p>
+
+        <h4>CSS selector:</h4>
+        <p>#confirmationContainer, #orderBold, .confirmationActions, .cart-thumb, .numeric</p>
+      </section>
     </section>
     <!-- // COMBINED ELEMENTS SECTION -->
 
@@ -718,18 +857,39 @@
     <!-- // RESPONSIVE STRUCTURES SECTION  -->
     <section id="responsive-structures">
       <h2>Responsive Structures</h2>
+      <p class="atomicLevel"><strong>Atomic level:</strong> Templates and pages</p>
 
       <section class="element">
         <h3>Check out the various pages below!</h3>
-        <a class="button-nav" href="index.html">Homepage</a>
-        <a class="button-nav" href="productpage.html">Product Listing (multiple)</a>
-        <a class="button-nav" href="productdetail.html">Product Detail: Cookie</a>
-        <a class="button-nav" href="productdetail-croissant.html">Product Detail: Croissant</a>
-        <a class="button-nav" href="productdetail-muffin.html">Product Detail: Muffin</a>
-        <a class="button-nav" href="checkout.html">Checkout</a>
-        <a class="button-nav" href="confirmation.html">Payment Confirmation</a>
-        <a class="button-nav" href="about.html">About Us</a>
-        <a class="button-nav" href="events.html">Events</a>
+        <div class="buttonRow">
+          <a class="button-nav" href="index.html">Homepage</a>
+          <a class="button-nav" href="productpage.html">Product Listing (multiple)</a>
+          <a class="button-nav" href="productdetail.html">Product Detail: Cookie</a>
+          <a class="button-nav" href="productdetail-croissant.html">Product Detail: Croissant</a>
+          <a class="button-nav" href="productdetail-muffin.html">Product Detail: Muffin</a>
+          <a class="button-nav" href="checkout.html">Checkout</a>
+          <a class="button-nav" href="confirmation.html">Payment Confirmation</a>
+          <a class="button-nav" href="about.html">About Us</a>
+          <a class="button-nav" href="events.html">Events</a>
+        </div>
+      </section>
+
+      <section class="element">
+        <h3>Breakpoints and layout behaviour</h3>
+        <p class="atomicLevel"><strong>Atomic level:</strong> Templates</p>
+        <table>
+          <caption>What changes as the screen gets narrower</caption>
+          <thead>
+            <tr><th scope="col">Width</th><th scope="col">What changes</th></tr>
+          </thead>
+          <tbody>
+            <tr><th scope="row">Below 70em</th><td>Navigation links get less padding so they still fit in one row</td></tr>
+            <tr><th scope="row">Below 57em</th><td>On checkout, the cart moves above the payment form</td></tr>
+            <tr><th scope="row">Below 53em</th><td>Navigation collapses into a ☰ Menu button (CSS only); product cards shrink to two per row</td></tr>
+            <tr><th scope="row">Below 30em</th><td>Smaller page padding, compact navigation and tighter table cells for phones</td></tr>
+            <tr><th scope="row">Any width</th><td>Photo-and-text layouts, promo cards and category cards wrap on their own using flexbox or grid, with no media query</td></tr>
+          </tbody>
+        </table>
       </section>
 
     </section>
@@ -754,6 +914,8 @@
       </nav>
       <p class="footerSmall">&copy; 2026 CinnaMunch. A student project for IAT 339.</p>
     </footer>
+
+  <script src="scripts/navBarScript.js"></script>
 
   </body>
 </html>
